@@ -1,5 +1,4 @@
 const pattern = [
-    // Specific: Best or recommended courses
     {
         pattern: /(the\s+)?(best|recommend(ed)?)(\s+(a\s+)?)?course(s)?/i,
         answer: "We recommend starting with our Full-Stack Web Development course."
