@@ -28,7 +28,17 @@ const pattern = [
     {
         pattern: /\b(location|address|office)\b/i,
         answer: "We are located at 123 Code Street, Tech City, Country."
+    },
+    {
+        pattern: /contact|phone|number|email|reach\s+(you|us)/i,
+        answer: "You can contact us at contact@codethinker.com or call us at +1-800-123-4567."
+    },
+    {
+        pattern: /website|web\s*site|your\s+site|visit\s+(your\s+)?(website|site)/i,
+        answer: "You can visit our website at https://www.codethinker.com."
     }
+
+
 ];
 
 export default pattern;
