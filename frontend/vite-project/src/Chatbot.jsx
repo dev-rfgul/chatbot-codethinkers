@@ -118,12 +118,12 @@ const ChatPopup = () => {
         if (!userQuery.trim()) return;
 
         try {
-            const response = await fetch('http://localhost:3000/api/pattern-match', {
-                method: "POST",
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/pattern-match`, {
+                method: "POST", 
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query: userQuery }),
             });
-
+            console.log(response)
             const data = await response.json();
             setAnswer(data.answer);
             setMessages([...messages, { user: userQuery, bot: data.answer }]);
