@@ -3,10 +3,28 @@ import { FiMessageCircle, FiX } from "react-icons/fi";
 
 const ChatPopup = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const handleSend = () => {
-        // Handle sending message logic here
-        console.log("Message sent!");
+    const [userQuery, setUserQuery] = useState(false)
+    const handleSend = async (e) => {
+        e.preventDefault();
+        console.log(userQuery);
+
+        try {
+            const response = await fetch('http://localhost:3000/api/pattern-match', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ query: userQuery }) // Send it as an object
+            });
+
+            const data = await response.json();
+            console.log('Server response:', data);
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
+
 
     return (
         <div className="fixed bottom-6 right-6 z-50">
@@ -25,6 +43,8 @@ const ChatPopup = () => {
                     <div className="p-2 border-t">
                         <input
                             type="text"
+                            // value=""
+                            onChange={(e) => setUserQuery(e.target.value)}
                             placeholder="Type a message..."
                             className="w-full px-2 py-1 border text-black rounded focus:outline-none text-sm"
                         />
@@ -33,7 +53,7 @@ const ChatPopup = () => {
                         <button onClick={handleSend} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded">
                             Send
                         </button>
-                        </div>
+                    </div>
                 </div>
             ) : (
                 <button
