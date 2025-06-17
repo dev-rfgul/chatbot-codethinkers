@@ -38,7 +38,7 @@ const app = express();
 
 // ✅ CORS setup: Only allow frontend domain
 app.use(cors({
-  origin: ['https://chatbot-codethinkers.vercel.app','https://www.rfgul.live'],
+  origin: ['https://chatbot-codethinkers.vercel.app','https://www.rfgul.live','http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 app.use('/api', patternRoutes);
 
 // ✅ Use PORT from env or default to 5000
-const port = process.env.PORT || 5000;
+const port = process.env.LOCAL_HOST || 5000;
 app.listen(port, () => {
   console.log(`✅ Server is running on port: ${port}`);
 });

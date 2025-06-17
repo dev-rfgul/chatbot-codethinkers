@@ -26,6 +26,7 @@ const ChatPopup = () => {
             });
             console.log(response)
             const data = await response.json();
+            console.log(data);
             setAnswer(data.answer);
             setMessages([...messages, { user: userQuery, bot: data.answer }]);
             setUserQuery('');
