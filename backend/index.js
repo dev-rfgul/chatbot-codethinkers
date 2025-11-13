@@ -38,7 +38,7 @@ const app = express();
 
 // ✅ CORS setup: Only allow frontend domain
 app.use(cors({
-  origin: ['https://chatbot-codethinkers.vercel.app','https://www.rfgul.live','http://localhost:5173'],
+  origin: ['http://localhost:5173','https://devrfgul.vercel.app','http://localhost:5174'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
