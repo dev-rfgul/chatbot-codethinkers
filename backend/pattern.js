@@ -473,7 +473,7 @@ My frontend expertise includes:
 
 I focus on building responsive, optimized, and user-friendly interfaces.
 `
-}
+},
 
   
 {
@@ -489,7 +489,7 @@ My backend expertise includes:
 
 I build secure APIs, manage databases, and create scalable server-side applications.
 `
-}
+},
 
   
   // Professional Experience
@@ -511,7 +511,7 @@ Current
 
 I have worked on diverse projects, including AI-based tools, web applications, and production-level frontend solutions.
 `
-}
+},
 
   
   // CodesFix Experience
@@ -554,7 +554,7 @@ A full-stack system for managing university bus routes, schedules, and student r
 
 Each project reflects different aspects of full-stack development and problem-solving.
 `
-}
+},
 
   
   // Ecom Website Project
@@ -646,7 +646,7 @@ My long-term learning path includes:
 
 I aim to build scalable, production-level applications and advance toward cloud-native development.
 `
-}
+},
 
   
   // Generic Greeting
